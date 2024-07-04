@@ -18,6 +18,7 @@ public class Plant {
     private Long id;
 
     private String name;
+    private Status status;
 
     @OneToMany(mappedBy = "plant", cascade = CascadeType.ALL)
     private List<PlantDisease> diseases;

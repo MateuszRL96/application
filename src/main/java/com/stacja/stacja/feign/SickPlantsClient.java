@@ -5,6 +5,7 @@ import com.stacja.stacja.entity.Plant;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 
 import java.util.List;
 
@@ -13,4 +14,7 @@ public interface SickPlantsClient {
 
     @GetMapping("/plants/sick")
     ResponseEntity<List<Plant>> getSickPlants();
+
+    @PostMapping("/plants")
+    ResponseEntity<String> addIllnessPlant(Plant plant);
 }

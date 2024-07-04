@@ -20,6 +20,7 @@ public class PlantService {
         this.sickPlantsClient = sickPlantsClient;
         this.plantRepository = plantRepository;
     }
+
     public List<Plant> getAllPlants() {
         return plantRepository.findAll();
     }
